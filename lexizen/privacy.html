@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – LexiZen</title>
+  <meta name="description" content="LexiZen Privacy Policy – Learn how we collect, use, and protect your information." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0f1a;
+      --surface: #141726;
+      --border: #1e2338;
+      --accent: #7c6af7;
+      --accent-glow: rgba(124, 106, 247, 0.18);
+      --text: #e8eaf6;
+      --muted: #8b90b8;
+      --teal: #4fd1c5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13, 15, 26, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--accent), var(--teal));
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 16px; color: #fff;
+      box-shadow: 0 0 18px var(--accent-glow);
+    }
+
+    header h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: linear-gradient(90deg, var(--accent), var(--teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header .subtitle {
+      margin-left: auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 72px 24px 56px;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(124,106,247,0.12) 0%, transparent 70%);
+    }
+
+    .hero .badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border: 1px solid rgba(124,106,247,0.4);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #fff 40%, var(--muted));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 48px;
+    }
+
+    .toc h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 8px 24px;
+      counter-reset: toc;
+    }
+
+    .toc li { counter-increment: toc; }
+
+    .toc a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 0.7rem;
+      color: var(--accent);
+      opacity: 0.7;
+    }
+
+    .toc a:hover { color: var(--text); }
+
+    /* ── Sections ── */
+    .section {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 40px;
+      margin-bottom: 24px;
+      background: var(--surface);
+      transition: border-color 0.3s;
+    }
+
+    .section:hover { border-color: rgba(124,106,247,0.35); }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .section-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--accent-glow);
+      border: 1px solid rgba(124,106,247,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .section h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .section p, .section li {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .section ul, .section ol {
+      padding-left: 20px;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .section li::marker { color: var(--accent); }
+
+    .section p + p { margin-top: 12px; }
+    .section p + ul, .section p + ol { margin-top: 8px; }
+
+    /* ── Info pills ── */
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .pill {
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      background: rgba(79, 209, 197, 0.1);
+      border: 1px solid rgba(79, 209, 197, 0.25);
+      color: var(--teal);
+    }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: var(--accent-glow);
+      border: 1px solid rgba(124,106,247,0.3);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 14px;
+      font-size: 0.875rem;
+      color: #c5c0f5;
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(124,106,247,0.15), rgba(79,209,197,0.08));
+      border: 1px solid rgba(124,106,247,0.3);
+      border-radius: 16px;
+      padding: 36px 40px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .contact-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+
+    .contact-card a {
+      display: inline-block;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, var(--accent), #5b8df7);
+      border-radius: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: opacity 0.2s, transform 0.2s;
+      box-shadow: 0 4px 24px rgba(124,106,247,0.35);
+    }
+
+    .contact-card a:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    footer span { color: var(--accent); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header { padding: 14px 20px; }
+      .section { padding: 24px 20px; }
+      .toc { padding: 20px; }
+      .contact-card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo-mark">L</div>
+  <h1>LexiZen</h1>
+  <span class="subtitle">Privacy Policy</span>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="badge">Legal</div>
+  <h2>Your Privacy Matters</h2>
+  <p>We're committed to being transparent about how LexiZen collects, uses, and protects your information.</p>
+</div>
+
+<!-- Main content -->
+<div class="container">
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>Table of Contents</h3>
+    <ol>
+      <li><a href="#info-we-collect">Information We Collect</a></li>
+      <li><a href="#how-we-use">How We Use Your Information</a></li>
+      <li><a href="#third-party">Third-Party Services</a></li>
+      <li><a href="#data-sharing">Data Sharing</a></li>
+      <li><a href="#data-retention">Data Retention</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#children">Children's Privacy</a></li>
+      <li><a href="#security">Security</a></li>
+      <li><a href="#changes">Policy Changes</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <!-- Effective date notice -->
+  <div class="section" style="border-color: rgba(79,209,197,0.3); margin-bottom: 32px;">
+    <div class="section-header">
+      <div class="section-icon">📅</div>
+      <h3>Effective Date</h3>
+    </div>
+    <p>This Privacy Policy is effective as of <strong>May 13, 2026</strong> and applies to all users of the LexiZen mobile application ("App"). By using LexiZen, you agree to the collection and use of information as described in this policy.</p>
+  </div>
+
+  <!-- 1. Information We Collect -->
+  <div class="section" id="info-we-collect">
+    <div class="section-header">
+      <div class="section-icon">📋</div>
+      <h3>1. Information We Collect</h3>
+    </div>
+    <p><strong style="color:var(--text)">Account & Profile Information</strong></p>
+    <ul>
+      <li>Display name and profile picture (optional, uploaded by you)</li>
+      <li>Email address (when signing in with Apple or email)</li>
+      <li>Apple user ID (when using Sign in with Apple)</li>
+    </ul>
+
+    <p style="margin-top:16px"><strong style="color:var(--text)">Gameplay Data</strong></p>
+    <ul>
+      <li>Game progress, scores, and level completions across all modes (Flow, Haiku, Harmony, Spelling Bee, Tile Rush, Word Ladder)</li>
+      <li>In-app currency (ZenCoins) balance and transaction history</li>
+      <li>Sound pack purchases and preferences</li>
+    </ul>
+
+    <p style="margin-top:16px"><strong style="color:var(--text)">Social Features</strong></p>
+    <ul>
+      <li>Friends list and friend request activity</li>
+      <li>Leaderboard rankings and multiplayer match history</li>
+    </ul>
+
+    <p style="margin-top:16px"><strong style="color:var(--text)">Device & Technical Data</strong></p>
+    <ul>
+      <li>Device type and operating system version (iOS / Android)</li>
+      <li>App version and crash/error logs</li>
+      <li>Audio and app preferences stored locally on your device</li>
+    </ul>
+
+    <div class="pill-row">
+      <span class="pill">Account Data</span>
+      <span class="pill">Gameplay Progress</span>
+      <span class="pill">Social Data</span>
+      <span class="pill">Device Info</span>
+    </div>
+  </div>
+
+  <!-- 2. How We Use -->
+  <div class="section" id="how-we-use">
+    <div class="section-header">
+      <div class="section-icon">⚙️</div>
+      <h3>2. How We Use Your Information</h3>
+    </div>
+    <p>We use the information we collect to:</p>
+    <ul>
+      <li>Create and manage your LexiZen account</li>
+      <li>Save and sync your game progress across devices</li>
+      <li>Display leaderboards and enable multiplayer matchmaking</li>
+      <li>Power social features like friends lists and challenges</li>
+      <li>Process in-app purchases and manage your ZenCoins balance</li>
+      <li>Deliver and personalize sound pack content</li>
+      <li>Improve app performance, fix bugs, and develop new features</li>
+      <li>Send you important service notifications (not marketing spam)</li>
+    </ul>
+    <div class="highlight">
+      We do <strong>not</strong> sell your personal information to advertisers or third-party brokers.
+    </div>
+  </div>
+
+  <!-- 3. Third-Party Services -->
+  <div class="section" id="third-party">
+    <div class="section-header">
+      <div class="section-icon">🔗</div>
+      <h3>3. Third-Party Services</h3>
+    </div>
+    <p>LexiZen uses trusted third-party services to operate. Each has its own privacy policy:</p>
+
+    <ul style="margin-top:14px; list-style:none; padding-left:0; gap:10px;">
+      <li style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:12px 16px;">
+        <strong style="color:var(--text)">Supabase</strong> — Backend database, user authentication, real-time features, and file storage (profile pictures). <a href="https://supabase.com/privacy" target="_blank" rel="noopener" style="color:var(--accent)">Privacy Policy ↗</a>
+      </li>
+      <li style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:12px 16px;">
+        <strong style="color:var(--text)">Apple Sign In</strong> — Secure, privacy-preserving authentication. Apple may provide a private relay email. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener" style="color:var(--accent)">Privacy Policy ↗</a>
+      </li>
+      <li style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:12px 16px;">
+        <strong style="color:var(--text)">Google Fonts</strong> — Loads the Inter typeface for the UI. Font requests may log your IP address per Google's standard policies. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--accent)">Privacy Policy ↗</a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- 4. Data Sharing -->
+  <div class="section" id="data-sharing">
+    <div class="section-header">
+      <div class="section-icon">🤝</div>
+      <h3>4. Data Sharing</h3>
+    </div>
+    <p>We do <strong style="color:var(--text)">not</strong> share your personal data with third parties except in the following limited circumstances:</p>
+    <ul>
+      <li><strong style="color:var(--text)">Service providers</strong> — Only with providers listed above who help us operate the app, under strict data processing agreements.</li>
+      <li><strong style="color:var(--text)">Legal requirements</strong> — If required by law, court order, or to protect the rights and safety of our users.</li>
+      <li><strong style="color:var(--text)">Business transfers</strong> — In the unlikely event of a merger or acquisition, your data may be transferred with appropriate notice to you.</li>
+    </ul>
+    <p style="margin-top:12px;">Public leaderboard data (your display name and score) is visible to other LexiZen players. You can change your display name in your profile settings at any time.</p>
+  </div>
+
+  <!-- 5. Data Retention -->
+  <div class="section" id="data-retention">
+    <div class="section-header">
+      <div class="section-icon">🗃️</div>
+      <h3>5. Data Retention</h3>
+    </div>
+    <p>We retain your account data for as long as your account is active or as needed to provide you with the app. If you request account deletion, we will delete your personal data within <strong style="color:var(--text)">30 days</strong>, except where we are required to retain it for legal obligations.</p>
+    <p>Game progress and preference data stored locally on your device (via shared preferences) is controlled entirely by you and can be cleared by uninstalling the app.</p>
+  </div>
+
+  <!-- 6. Your Rights -->
+  <div class="section" id="your-rights">
+    <div class="section-header">
+      <div class="section-icon">✅</div>
+      <h3>6. Your Rights</h3>
+    </div>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong style="color:var(--text)">Access</strong> — Request a copy of the data we hold about you.</li>
+      <li><strong style="color:var(--text)">Correction</strong> — Update inaccurate or incomplete information through your profile settings.</li>
+      <li><strong style="color:var(--text)">Deletion</strong> — Request that we delete your account and associated data.</li>
+      <li><strong style="color:var(--text)">Portability</strong> — Request your data in a portable format where technically feasible.</li>
+      <li><strong style="color:var(--text)">Opt-out</strong> — Opt out of non-essential communications at any time.</li>
+    </ul>
+    <p style="margin-top:12px;">To exercise any of these rights, please contact us using the details in the <a href="#contact" style="color:var(--accent)">Contact Us</a> section.</p>
+  </div>
+
+  <!-- 7. Children -->
+  <div class="section" id="children">
+    <div class="section-header">
+      <div class="section-icon">👶</div>
+      <h3>7. Children's Privacy</h3>
+    </div>
+    <p>LexiZen is designed for general audiences and is <strong style="color:var(--text)">not directed at children under the age of 13</strong> (or 16 in certain jurisdictions). We do not knowingly collect personal information from children under these ages.</p>
+    <p>If you are a parent or guardian and believe your child has provided us with personal information, please contact us immediately and we will delete that information promptly.</p>
+  </div>
+
+  <!-- 8. Security -->
+  <div class="section" id="security">
+    <div class="section-header">
+      <div class="section-icon">🔒</div>
+      <h3>8. Security</h3>
+    </div>
+    <p>We take the security of your data seriously. LexiZen implements the following measures:</p>
+    <ul>
+      <li>All data in transit is encrypted using <strong style="color:var(--text)">HTTPS/TLS</strong></li>
+      <li>Passwords are never stored in plain text — authentication is handled securely via Supabase and Apple Sign In</li>
+      <li>Supabase Row-Level Security (RLS) policies ensure users can only access their own data</li>
+      <li>Profile images are stored in secured, access-controlled storage buckets</li>
+    </ul>
+    <div class="highlight">
+      While we strive to use industry-standard security measures, no method of electronic storage or internet transmission is 100% secure. We encourage you to use a strong, unique password and to keep your device secure.
+    </div>
+  </div>
+
+  <!-- 9. Changes -->
+  <div class="section" id="changes">
+    <div class="section-header">
+      <div class="section-icon">📝</div>
+      <h3>9. Changes to This Policy</h3>
+    </div>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. When we make significant changes, we will:</p>
+    <ul>
+      <li>Update the effective date at the top of this page</li>
+      <li>Notify you through the app or via the email associated with your account</li>
+    </ul>
+    <p>Your continued use of LexiZen after any changes become effective constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <!-- 10. Contact -->
+  <div class="contact-card" id="contact">
+    <h3>10. Contact Us</h3>
+    <p>Have questions about this Privacy Policy or how your data is handled? We'd love to hear from you.</p>
+    <a href="mailto:"info@vizura.app">support@lexizen.app</a>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 <span>LexiZen</span>. All rights reserved. &nbsp;·&nbsp; Privacy Policy &nbsp;·&nbsp; <a href="terms.html" style="color:var(--muted); text-decoration:none;">Terms of Service</a></p>
+</footer>
+
+</body>
+</html>
