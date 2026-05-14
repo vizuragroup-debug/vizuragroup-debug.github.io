@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service – LexiZen</title>
+  <meta name="description" content="LexiZen Terms of Service – The rules and guidelines for using the LexiZen app." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0f1a;
+      --surface: #141726;
+      --border: #1e2338;
+      --accent: #7c6af7;
+      --accent-glow: rgba(124, 106, 247, 0.18);
+      --text: #e8eaf6;
+      --muted: #8b90b8;
+      --teal: #4fd1c5;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+      min-height: 100vh;
+    }
+
+    /* ── Header ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(13, 15, 26, 0.85);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .logo-mark {
+      width: 36px; height: 36px;
+      background: linear-gradient(135deg, var(--accent), var(--teal));
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 16px; color: #fff;
+      box-shadow: 0 0 18px var(--accent-glow);
+    }
+
+    header h1 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      background: linear-gradient(90deg, var(--accent), var(--teal));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    header .subtitle {
+      margin-left: auto;
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 72px 24px 56px;
+      background: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(124,106,247,0.12) 0%, transparent 70%);
+    }
+
+    .hero .badge {
+      display: inline-block;
+      padding: 4px 14px;
+      border: 1px solid rgba(124,106,247,0.4);
+      border-radius: 999px;
+      font-size: 0.72rem;
+      color: var(--accent);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .hero h2 {
+      font-size: clamp(2rem, 5vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #fff 40%, var(--muted));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font-size: 1rem;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    /* ── Layout ── */
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 24px 80px;
+    }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 32px;
+      margin-bottom: 48px;
+    }
+
+    .toc h3 {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+
+    .toc ol {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 8px 24px;
+      counter-reset: toc;
+    }
+
+    .toc li { counter-increment: toc; }
+
+    .toc a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .toc a::before {
+      content: counter(toc, decimal-leading-zero);
+      font-size: 0.7rem;
+      color: var(--accent);
+      opacity: 0.7;
+    }
+
+    .toc a:hover { color: var(--text); }
+
+    /* ── Sections ── */
+    .section {
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 36px 40px;
+      margin-bottom: 24px;
+      background: var(--surface);
+      transition: border-color 0.3s;
+    }
+
+    .section:hover { border-color: rgba(124,106,247,0.35); }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 20px;
+    }
+
+    .section-icon {
+      width: 40px; height: 40px;
+      border-radius: 10px;
+      background: var(--accent-glow);
+      border: 1px solid rgba(124,106,247,0.3);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .section h3 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .section p, .section li {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .section ul, .section ol {
+      padding-left: 20px;
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .section li::marker { color: var(--accent); }
+
+    .section p + p { margin-top: 12px; }
+    .section p + ul, .section p + ol { margin-top: 8px; }
+
+    /* ── Highlight box ── */
+    .highlight {
+      background: var(--accent-glow);
+      border: 1px solid rgba(124,106,247,0.3);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 14px;
+      font-size: 0.875rem;
+      color: #c5c0f5;
+    }
+
+    .highlight.warning {
+      background: rgba(247, 179, 106, 0.1);
+      border-color: rgba(247, 179, 106, 0.3);
+      color: #f7d4a0;
+    }
+
+    /* ── Pill row ── */
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .pill {
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 500;
+      background: rgba(79, 209, 197, 0.1);
+      border: 1px solid rgba(79, 209, 197, 0.25);
+      color: var(--teal);
+    }
+
+    /* ── Contact card ── */
+    .contact-card {
+      background: linear-gradient(135deg, rgba(124,106,247,0.15), rgba(79,209,197,0.08));
+      border: 1px solid rgba(124,106,247,0.3);
+      border-radius: 16px;
+      padding: 36px 40px;
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .contact-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .contact-card p { color: var(--muted); font-size: 0.9rem; margin-bottom: 20px; }
+
+    .contact-card a.btn {
+      display: inline-block;
+      padding: 12px 28px;
+      background: linear-gradient(135deg, var(--accent), #5b8df7);
+      border-radius: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: opacity 0.2s, transform 0.2s;
+      box-shadow: 0 4px 24px rgba(124,106,247,0.35);
+    }
+
+    .contact-card a.btn:hover { opacity: 0.88; transform: translateY(-2px); }
+
+    /* ── Footer ── */
+    footer {
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 32px 24px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+
+    footer span { color: var(--accent); }
+    footer a { color: var(--muted); text-decoration: none; }
+    footer a:hover { color: var(--text); }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header { padding: 14px 20px; }
+      .section { padding: 24px 20px; }
+      .toc { padding: 20px; }
+      .contact-card { padding: 28px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<header>
+  <div class="logo-mark">L</div>
+  <h1>LexiZen</h1>
+  <span class="subtitle">Terms of Service</span>
+</header>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="badge">Legal</div>
+  <h2>Terms of Service</h2>
+  <p>Please read these terms carefully before using LexiZen. They outline your rights and responsibilities as a player.</p>
+</div>
+
+<!-- Main content -->
+<div class="container">
+
+  <!-- TOC -->
+  <div class="toc">
+    <h3>Table of Contents</h3>
+    <ol>
+      <li><a href="#acceptance">Acceptance of Terms</a></li>
+      <li><a href="#eligibility">Eligibility</a></li>
+      <li><a href="#accounts">Your Account</a></li>
+      <li><a href="#gameplay">Gameplay & Content</a></li>
+      <li><a href="#purchases">Purchases & Currency</a></li>
+      <li><a href="#social">Social Features</a></li>
+      <li><a href="#conduct">Prohibited Conduct</a></li>
+      <li><a href="#ip">Intellectual Property</a></li>
+      <li><a href="#disclaimer">Disclaimers</a></li>
+      <li><a href="#termination">Termination</a></li>
+      <li><a href="#changes">Changes to Terms</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ol>
+  </div>
+
+  <!-- Effective date -->
+  <div class="section" style="border-color: rgba(79,209,197,0.3); margin-bottom: 32px;">
+    <div class="section-header">
+      <div class="section-icon">📅</div>
+      <h3>Effective Date</h3>
+    </div>
+    <p>These Terms of Service ("Terms") are effective as of <strong>May 13, 2026</strong> and govern your use of the LexiZen mobile application ("App"), operated by the LexiZen team ("we," "us," or "our"). By downloading, installing, or using the App, you agree to be bound by these Terms.</p>
+  </div>
+
+  <!-- 1. Acceptance -->
+  <div class="section" id="acceptance">
+    <div class="section-header">
+      <div class="section-icon">✍️</div>
+      <h3>1. Acceptance of Terms</h3>
+    </div>
+    <p>By accessing or using LexiZen, you confirm that you have read, understood, and agree to these Terms and our <a href="privacy.html" style="color:var(--accent)">Privacy Policy</a>. If you do not agree, you must not use the App.</p>
+    <p>We reserve the right to update these Terms at any time. Continued use of the App after changes are posted constitutes your acceptance of the revised Terms.</p>
+  </div>
+
+  <!-- 2. Eligibility -->
+  <div class="section" id="eligibility">
+    <div class="section-header">
+      <div class="section-icon">🪪</div>
+      <h3>2. Eligibility</h3>
+    </div>
+    <p>You must be at least <strong style="color:var(--text)">13 years of age</strong> (or 16 in certain jurisdictions) to use LexiZen. If you are under 18, you represent that your parent or legal guardian has reviewed and agreed to these Terms on your behalf.</p>
+    <p>By using the App, you represent and warrant that you meet all eligibility requirements and that all information you submit is accurate and truthful.</p>
+  </div>
+
+  <!-- 3. Accounts -->
+  <div class="section" id="accounts">
+    <div class="section-header">
+      <div class="section-icon">👤</div>
+      <h3>3. Your Account</h3>
+    </div>
+    <p>To access certain features — including leaderboards, multiplayer, and the store — you must create an account. You agree to:</p>
+    <ul>
+      <li>Provide accurate and up-to-date information during registration</li>
+      <li>Keep your login credentials confidential and not share your account</li>
+      <li>Notify us immediately at <a href="mailto:info@vizura.app" style="color:var(--accent)">info@vizura.app</a> if you suspect unauthorized access</li>
+      <li>Take responsibility for all activity that occurs under your account</li>
+    </ul>
+    <p>We reserve the right to suspend or terminate accounts that violate these Terms.</p>
+    <div class="highlight">
+      LexiZen supports <strong>Sign in with Apple</strong>. If you use this method, Apple controls the authentication process and may provide a private relay email address.
+    </div>
+  </div>
+
+  <!-- 4. Gameplay & Content -->
+  <div class="section" id="gameplay">
+    <div class="section-header">
+      <div class="section-icon">🎮</div>
+      <h3>4. Gameplay & Content</h3>
+    </div>
+    <p>LexiZen offers multiple word puzzle game modes including <strong style="color:var(--text)">Flow, Haiku, Harmony, Spelling Bee, Tile Rush, and Word Ladder</strong>. All game content, word lists, levels, puzzles, and sound packs are owned by us and licensed to you for personal, non-commercial use only.</p>
+    <p>You acknowledge that:</p>
+    <ul>
+      <li>Game progress and scores are stored on our servers and may be reset in rare cases of technical issues</li>
+      <li>We may modify, add, or remove game modes, levels, or features at any time</li>
+      <li>Leaderboard rankings are calculated server-side and our determinations are final</li>
+      <li>Multiplayer matchmaking is automated and we do not guarantee specific match outcomes</li>
+    </ul>
+  </div>
+
+  <!-- 5. Purchases & Currency -->
+  <div class="section" id="purchases">
+    <div class="section-header">
+      <div class="section-icon">💎</div>
+      <h3>5. Purchases & Virtual Currency</h3>
+    </div>
+    <p><strong style="color:var(--text)">ZenCoins</strong> are LexiZen's virtual in-app currency. ZenCoins and purchased sound packs are subject to the following terms:</p>
+    <ul>
+      <li>ZenCoins have no real-world monetary value and cannot be exchanged for cash or transferred to other users</li>
+      <li>All purchases are processed through the Apple App Store or Google Play Store under their respective terms</li>
+      <li>Purchases are <strong style="color:var(--text)">final and non-refundable</strong> except as required by applicable law or the policies of the relevant app store</li>
+      <li>We reserve the right to modify ZenCoin pricing and sound pack availability at any time</li>
+      <li>If your account is terminated for a Terms violation, you forfeit any unused ZenCoins or purchased content</li>
+    </ul>
+    <div class="highlight warning">
+      For refund requests, please contact Apple or Google directly through the platform where you made your purchase, as we do not process payments ourselves.
+    </div>
+  </div>
+
+  <!-- 6. Social Features -->
+  <div class="section" id="social">
+    <div class="section-header">
+      <div class="section-icon">👥</div>
+      <h3>6. Social Features</h3>
+    </div>
+    <p>LexiZen includes social features such as friends lists, multiplayer matches, and leaderboards. When using these features, you agree to:</p>
+    <ul>
+      <li>Interact respectfully with other players at all times</li>
+      <li>Not use the friends or messaging system to harass, spam, or intimidate other users</li>
+      <li>Understand that your display name and scores are visible to other players on leaderboards</li>
+      <li>Not attempt to manipulate leaderboard rankings through exploits, bots, or coordinated abuse</li>
+    </ul>
+    <p>We reserve the right to remove content, revoke social privileges, or suspend accounts for violations of these social guidelines.</p>
+  </div>
+
+  <!-- 7. Prohibited Conduct -->
+  <div class="section" id="conduct">
+    <div class="section-header">
+      <div class="section-icon">🚫</div>
+      <h3>7. Prohibited Conduct</h3>
+    </div>
+    <p>You agree <strong style="color:var(--text)">not</strong> to:</p>
+    <ul>
+      <li>Use the App for any unlawful purpose or in violation of these Terms</li>
+      <li>Cheat, exploit game bugs, or use third-party tools to gain an unfair advantage</li>
+      <li>Reverse engineer, decompile, or attempt to extract the source code of the App</li>
+      <li>Attempt to gain unauthorized access to our servers, databases, or other users' accounts</li>
+      <li>Use automated bots, scripts, or other tools to interact with the App</li>
+      <li>Impersonate any person, entity, or the LexiZen team</li>
+      <li>Upload or transmit any malicious code, viruses, or harmful content</li>
+      <li>Harvest or collect other users' personal information without their consent</li>
+      <li>Resell, sublicense, or commercially exploit any part of the App or its content</li>
+    </ul>
+    <div class="highlight warning">
+      Violations may result in immediate account suspension or termination without notice or refund.
+    </div>
+  </div>
+
+  <!-- 8. Intellectual Property -->
+  <div class="section" id="ip">
+    <div class="section-header">
+      <div class="section-icon">©️</div>
+      <h3>8. Intellectual Property</h3>
+    </div>
+    <p>All content within LexiZen — including but not limited to game mechanics, artwork, sound packs, word lists, UI design, logos, and branding — is the exclusive intellectual property of LexiZen and is protected by applicable copyright, trademark, and other intellectual property laws.</p>
+    <p>We grant you a limited, non-exclusive, non-transferable, revocable license to use the App solely for personal, non-commercial entertainment purposes. This license does not grant you any ownership rights.</p>
+    <p>Any content you create or upload (such as a profile picture) remains yours. By uploading it, you grant us a limited license to display it within the App.</p>
+  </div>
+
+  <!-- 9. Disclaimers -->
+  <div class="section" id="disclaimer">
+    <div class="section-header">
+      <div class="section-icon">⚠️</div>
+      <h3>9. Disclaimers & Limitation of Liability</h3>
+    </div>
+    <p>LexiZen is provided on an <strong style="color:var(--text)">"as is" and "as available"</strong> basis without warranties of any kind, either express or implied. We do not warrant that:</p>
+    <ul>
+      <li>The App will be uninterrupted, error-free, or free of viruses</li>
+      <li>Any game progress, scores, or purchased content will be preserved indefinitely</li>
+      <li>The results of using the App will meet your expectations</li>
+    </ul>
+    <p>To the maximum extent permitted by law, LexiZen shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising out of your use of or inability to use the App, even if we have been advised of the possibility of such damages.</p>
+    <div class="pill-row">
+      <span class="pill">No Warranty</span>
+      <span class="pill">Use at Your Own Risk</span>
+      <span class="pill">Limited Liability</span>
+    </div>
+  </div>
+
+  <!-- 10. Termination -->
+  <div class="section" id="termination">
+    <div class="section-header">
+      <div class="section-icon">🔚</div>
+      <h3>10. Termination</h3>
+    </div>
+    <p>You may stop using LexiZen at any time by deleting the App. To request full account deletion, contact us at <a href="mailto:info@vizura.app" style="color:var(--accent)">info@vizura.app</a>.</p>
+    <p>We reserve the right to suspend or permanently terminate your account at our sole discretion, with or without notice, if we determine that you have violated these Terms or engaged in conduct harmful to the App, other users, or us. Upon termination:</p>
+    <ul>
+      <li>Your license to use the App immediately ceases</li>
+      <li>You forfeit any unused ZenCoins or purchased content</li>
+      <li>We may retain certain data as required by law or for legitimate business purposes</li>
+    </ul>
+  </div>
+
+  <!-- 11. Changes -->
+  <div class="section" id="changes">
+    <div class="section-header">
+      <div class="section-icon">📝</div>
+      <h3>11. Changes to These Terms</h3>
+    </div>
+    <p>We may revise these Terms from time to time. When we make material changes, we will update the effective date at the top of this page and may notify you via the App or by email.</p>
+    <p>It is your responsibility to review these Terms periodically. Your continued use of LexiZen after changes take effect constitutes your acceptance of the updated Terms.</p>
+  </div>
+
+  <!-- 12. Contact -->
+  <div class="contact-card" id="contact">
+    <h3>12. Contact Us</h3>
+    <p>Questions about these Terms? We're happy to help clarify anything.</p>
+    <a href="mailto:info@vizura.app" class="btn">info@vizura.app</a>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2026 <span>LexiZen</span>. All rights reserved. &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a> &nbsp;·&nbsp; Terms of Service</p>
+</footer>
+
+</body>
+</html>
