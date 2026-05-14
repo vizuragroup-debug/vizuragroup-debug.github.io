@@ -349,8 +349,8 @@
     <p><strong style="color:var(--text)">Account & Profile Information</strong></p>
     <ul>
       <li>Display name and profile picture (optional, uploaded by you)</li>
-      <li>Email address (when signing in with Apple or email)</li>
-      <li>Apple user ID (when using Sign in with Apple)</li>
+      <li>Email address (when signing in via third-party providers or email)</li>
+      <li>Third-party user ID (when using social login features)</li>
     </ul>
 
     <p style="margin-top:16px"><strong style="color:var(--text)">Gameplay Data</strong></p>
@@ -413,13 +413,13 @@
 
     <ul style="margin-top:14px; list-style:none; padding-left:0; gap:10px;">
       <li style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:12px 16px;">
-        <strong style="color:var(--text)">Supabase</strong> — Backend database, user authentication, real-time features, and file storage (profile pictures). <a href="https://supabase.com/privacy" target="_blank" rel="noopener" style="color:var(--accent)">Privacy Policy ↗</a>
+        <strong style="color:var(--text)">Cloud Infrastructure Providers</strong> — Backend database, user authentication, real-time features, and file storage.
       </li>
       <li style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:12px 16px;">
-        <strong style="color:var(--text)">Apple Sign In</strong> — Secure, privacy-preserving authentication. Apple may provide a private relay email. <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener" style="color:var(--accent)">Privacy Policy ↗</a>
+        <strong style="color:var(--text)">Authentication Providers</strong> — Secure, privacy-preserving authentication via third-party login services.
       </li>
       <li style="background:rgba(255,255,255,0.03); border:1px solid var(--border); border-radius:10px; padding:12px 16px;">
-        <strong style="color:var(--text)">Google Fonts</strong> — Loads the Inter typeface for the UI. Font requests may log your IP address per Google's standard policies. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--accent)">Privacy Policy ↗</a>
+        <strong style="color:var(--text)">UI & Performance Tools</strong> — Content delivery networks and services used to provide fonts and monitor app performance.
       </li>
     </ul>
   </div>
@@ -485,8 +485,8 @@
     <p>We take the security of your data seriously. LexiZen implements the following measures:</p>
     <ul>
       <li>All data in transit is encrypted using <strong style="color:var(--text)">HTTPS/TLS</strong></li>
-      <li>Passwords are never stored in plain text — authentication is handled securely via Supabase and Apple Sign In</li>
-      <li>Supabase Row-Level Security (RLS) policies ensure users can only access their own data</li>
+      <li>Passwords are never stored in plain text — authentication is handled securely via industry-standard providers</li>
+      <li>Strict database security policies ensure users can only access their own data</li>
       <li>Profile images are stored in secured, access-controlled storage buckets</li>
     </ul>
     <div class="highlight">
